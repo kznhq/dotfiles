@@ -276,11 +276,17 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
+// spawn-at-startup "waybar"
 // spawn-at-startup "qs" "-c" "noctalia-shell"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+
+// there's probably ways to do these with dinit instead but I daily drive niri so this is good enough for now
+spawn-sh-at-startup "dms run" //dms because I use dinit and can't figure out how else to make it spawn at startup
+spawn-sh-at-startup "sudo dinitctl restart ntpd" // clock
+spawn-sh-at-startup "rfkill block bluetooth" // bluetooth
+
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
