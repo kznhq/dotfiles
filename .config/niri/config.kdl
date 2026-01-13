@@ -41,7 +41,7 @@ input {
         accel-profile "flat"
         // scroll-method "two-finger"
         // disabled-on-external-mouse
-        scroll-factor 0.3
+        scroll-factor 0.15
     }
 
     mouse {
@@ -50,7 +50,7 @@ input {
         // accel-speed 0.2
         accel-profile "flat"
         // scroll-method "no-scroll"
-        scroll-factor 0.5
+        scroll-factor 0.65
     }
 
     trackpoint {
