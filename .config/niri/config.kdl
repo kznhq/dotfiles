@@ -40,6 +40,7 @@ input {
         // accel-speed 0.2
         accel-profile "flat"
         // scroll-method "two-finger"
+        click-method "button-areas"
         // disabled-on-external-mouse
         scroll-factor 0.15
     }
@@ -283,6 +284,10 @@ layout {
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 // there's probably ways to do these with dinit instead but I daily drive niri so this is good enough for now
+/* spawn-sh-at-startup "dinitctl --user start wireplumber"
+spawn-sh-at-startup "dinitctl --user start pipewire-pulse" */
+
+spawn-sh-at-startup "sudo tlp start"
 spawn-sh-at-startup "dms run" //dms because I use dinit and can't figure out how else to make it spawn at startup
 spawn-sh-at-startup "rfkill block bluetooth" // bluetooth
 
@@ -377,7 +382,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "fuzzel"; }
+    Mod+D hotkey-overlay-title="Run an Application: tofi" { spawn-sh "tofi-drun --drun-launch=true"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
