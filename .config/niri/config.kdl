@@ -287,7 +287,8 @@ layout {
 /* spawn-sh-at-startup "dinitctl --user start wireplumber"
 spawn-sh-at-startup "dinitctl --user start pipewire-pulse" */
 
-// spawn-sh-at-startup "sudo tlp start"
+spawn-sh-at-startup "sudo tlp start"
+spawn-sh-at-startup "sudo dinitctl restart ntpd"
 spawn-sh-at-startup "dms run" //dms because I use dinit and can't figure out how else to make it spawn at startup
 spawn-sh-at-startup "rfkill block bluetooth" // bluetooth
 
