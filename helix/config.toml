@@ -1,1 +1,4 @@
-theme = "base16_transparent"
+theme = "kanagawa-dragon"
+
+[editor]
+line-number = "relative"
