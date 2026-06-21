@@ -43,6 +43,8 @@ local config = {}
       active_tab = {
         bg_color = '#181616',
         fg_color = '#C4746E',       
+
+        intensity = 'Bold',
       },
       inactive_tab = {
         bg_color = '#181616',
