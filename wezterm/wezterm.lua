@@ -15,6 +15,8 @@ local config = {}
     foreground = "#b3976d",
     background = "#120e08",
 
+    cursor_bg = '#b3976d',
+
     ansi = {
       "#655030", -- black
       "#b3976d", -- red
